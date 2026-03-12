@@ -5,6 +5,7 @@ const productRoutes = require('./productRoutes');
 const categoryRoutes = require('./categoryRoutes');
 const postRoutes = require('./postRoutes');
 const uploadRoutes = require('./uploadRoutes');
+const chatRoutes = require('./chatRoutes');
 
 const router = Router();
 
@@ -14,6 +15,7 @@ router.use('/products', productRoutes);
 router.use('/categories', categoryRoutes);
 router.use('/posts', postRoutes);
 router.use('/upload', uploadRoutes);
+router.use('/chat', chatRoutes);
 
 // Health check
 router.get('/health', (req, res) => {
