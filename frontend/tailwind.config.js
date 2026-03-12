@@ -21,6 +21,21 @@ module.exports = {
           950: '#081e52',
         },
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            // Cho phép inline style text-align từ CKEditor không bị override
+            'td, th': {
+              textAlign: 'unset',
+            },
+            // Không ép figure về margin 0
+            figure: {
+              marginTop: '1.5rem',
+              marginBottom: '1.5rem',
+            },
+          },
+        },
+      },
     },
   },
   plugins: [
