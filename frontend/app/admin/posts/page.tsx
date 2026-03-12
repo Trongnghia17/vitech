@@ -25,7 +25,7 @@ export default function AdminPostsPage() {
     setLoading(true);
     try {
       const res = await adminGet('/posts', { limit: 50 });
-      setPosts(res.data?.data || []);
+      setPosts(res.data || []);
     } catch {
       toast.error('Không thể tải danh sách bài viết');
     } finally {

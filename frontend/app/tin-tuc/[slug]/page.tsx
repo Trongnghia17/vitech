@@ -49,7 +49,19 @@ export default async function TinTucDetailPage({ params }: Props) {
         )}
 
         <article
-          className="prose prose-gray max-w-none prose-headings:font-bold prose-a:text-primary-700"
+          className="prose prose-lg prose-gray max-w-none
+            prose-headings:font-bold prose-headings:text-gray-900
+            prose-h1:text-3xl prose-h2:text-2xl prose-h3:text-xl prose-h4:text-lg
+            prose-p:text-gray-700 prose-p:leading-relaxed
+            prose-a:text-primary-700 prose-a:no-underline hover:prose-a:underline
+            prose-strong:text-gray-900
+            prose-blockquote:border-primary-700 prose-blockquote:bg-primary-50 prose-blockquote:rounded-r-lg prose-blockquote:py-1
+            prose-ul:list-disc prose-ol:list-decimal
+            prose-li:text-gray-700
+            prose-img:rounded-xl prose-img:shadow-md prose-img:mx-auto
+            prose-table:border-collapse prose-th:bg-gray-100 prose-th:border prose-th:border-gray-300 prose-td:border prose-td:border-gray-200
+            prose-code:bg-gray-100 prose-code:text-primary-700 prose-code:rounded prose-code:px-1
+            prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-pre:rounded-xl"
           dangerouslySetInnerHTML={{ __html: post.content || '' }}
         />
       </main>

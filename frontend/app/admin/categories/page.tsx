@@ -32,7 +32,7 @@ export default function AdminCategoriesPage() {
     setLoading(true);
     try {
       const res = await adminGet('/categories');
-      setCategories(res.data?.data || []);
+      setCategories(res.data || []);
     } catch {
       toast.error('Không thể tải danh mục');
     } finally {

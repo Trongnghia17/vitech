@@ -16,7 +16,9 @@ const logger = require('./config/logger');
 const app = express();
 
 // ─── Security ────────────────────────────────────────────────────────────────
-app.use(helmet());
+app.use(helmet({
+  crossOriginResourcePolicy: { policy: 'cross-origin' }, // cho phép load ảnh từ domain khác
+}));
 
 // ─── CORS ─────────────────────────────────────────────────────────────────────
 const allowedOrigins = (process.env.CLIENT_URL || 'http://localhost:3000').split(',');
